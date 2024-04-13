@@ -7,7 +7,7 @@ let limit
 if((isOwner || isPrems)) limit = 1000
 else limit = 600
 
-if (!args[0]) return conn.reply(m.chat, `*『✦』Ingrese un enlace de mediafire valido por favor.`, m, fake, )
+if (!args[0]) return conn.reply(m.chat, `*『✦』Ingrese un enlace de mediafire valido por favor.*`, m, fake, )
 if (!args[0].match(/mediafire/gi)) conn.reply(m.chat, `『✦』El enlace ingresado no es valido.`, m, fake, )
 
 try {
