@@ -312,8 +312,8 @@ return
 }}}} 
 } catch (e) {
     conn.reply(m.chat, 'Ocurrio un error inesperado.', m);
-console.log(`Error: ${usedPrefix + command}`)
-console.log(e)}}
+    }
+};
 
 handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
 export default handler
