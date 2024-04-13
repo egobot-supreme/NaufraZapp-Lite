@@ -28,6 +28,7 @@ ${readMore}
 •─•❮📑 \`INFORMACION\` 📑❯:
 ░⃟⃜📚ꪳ۫₎۬۟〬•⊰ #contacto
 ░⃟⃜📚ꪳ۫₎۬۟〬•⊰ #creador
+░⃟⃜📚ꪳ۫₎۬۟〬•⊰ #menuaudios
 ░⃟⃜📚ꪳ۫₎۬۟〬•⊰ #contactos
 ░⃟⃜📚ꪳ۫₎۬۟〬•⊰ #cuentasofc
 ░⃟⃜📚ꪳ۫₎۬۟〬•⊰ #cuentas
