@@ -23,7 +23,7 @@ let menu = `╭─────────────────···•⊰ �
 ╰─────────────────···•⊰ ⋆
 • https://youtube.com/@user-bw5wl4ye8r?si=qN8bP4ZdKm3yXwbx
 
-• https://www.atom.bio/bots-whatsapp-ofc
+• https://whatsapp.com/channel/0029VaRibRvDuMRj6ozMSN1l
 ${readMore}
 •─•❮📑 \`INFORMACION\` 📑❯:
 ░⃟⃜📚ꪳ۫₎۬۟〬•⊰ #contacto
