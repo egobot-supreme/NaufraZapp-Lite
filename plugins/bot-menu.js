@@ -1,4 +1,4 @@
-import PhoneNumber from 'awesome-phonenumber'
+/*import PhoneNumber from 'awesome-phonenumber'
 import fetch from 'node-fetch'
 let handler = async (m, { conn }) => {
   let _pp = './storage/menus/Menu1.jpg'
@@ -33,7 +33,7 @@ function clockString(ms) {
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [d, ' *Dias ☀️*\n ', h, ' *Horas 🕐*\n ', m, ' *Minutos ⏰*\n ', s, ' *Segundos ⏱️* '].map(v => v.toString().padStart(2, 0)).join('')
 	}
-/*import fs from 'fs'
+import fs from 'fs'
 import moment from 'moment-timezone'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
