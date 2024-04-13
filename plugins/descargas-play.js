@@ -6,7 +6,7 @@ import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
 
 var handler = async (m, { conn, command, args, text, usedPrefix }) => {
 
-if (!text) return conn.reply(m.chat, `🎌 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} New West - Those Eyes`,  m, fake, )
+if (!text) return conn.reply(m.chat, `*『✦』Ingrese el titulo de la canción que busca, por ejemplo:*\n\n*#${command} Lovely*`,  m, fake, )
 m.react(rwait)
 
 try {
@@ -18,23 +18,15 @@ additionalText = 'audio'
 } else if (command === 'play2') {
 additionalText = 'video'}
 
-let texto1 = `*∘ Título*
-${yt_play[0].title}
+let texto1 = `
+『🔎』 ${yt_play[0].title}
+ •┄┄┄┄┄┄┄┄┄┄┄┄•
+• ${yt_play[0].url}
+ •┄┄┄┄┄┄┄┄┄┄┄┄•
+» ${yt_play[0].author.name} • ${additionalText}
+01:06 ======⬤---------------------- ${secondString(yt_play[0].duration.seconds)}
 
-*∘ Duración* 
-${secondString(yt_play[0].duration.seconds)}
-
-*∘ Autor*
-${yt_play[0].author.name}
-
-*∘ Canal*
-${yt_play[0].author.url}
-
-*∘ Enlace*
-${yt_play[0].url}
-
-*Enviando ${additionalText}*
-⏰ Espere un momento`.trim()
+              ⇆ㅤ ◁ㅤ❚❚ㅤ▷  ⎌`.trim()
 await conn.sendMessage(m.chat, { text: texto1, contextInfo: { externalAdReply: { title: yt_play[0].title, body: dev, thumbnailUrl: yt_play[0].thumbnail, mediaType: 1, showAdAttribution: true, renderLargerThumbnail: true }}} , { quoted: m })
 
 if (command == 'play') {	
@@ -94,7 +86,7 @@ const dl_url = await yt.video[q].download()
 const ttl = await yt.title
 const size = await yt.video[q].fileSizeH
 m.react(done)
-await conn.sendMessage(m.chat, { video: { url: dl_url }, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `*Título*: ${ttl}\n*Peso:* ${size}`, thumbnail: await fetch(yt.thumbnail) }, { quoted: m })
+await conn.sendMessage(m.chat, { video: { url: dl_url }, fileName: `${ttl}.mp4`, mimetype: 'video/mp4', caption: `*『✦』Nombre:* ${ttl}\n*『✦』Tamaño:* ${size}\n\n*『✦』Bot:* ${wm}`, thumbnail: await fetch(yt.thumbnail) }, { quoted: m })
 } catch {
 
 try {
@@ -112,13 +104,13 @@ let n = lolh.result.title || 'error'
 let n2 = lolh.result.link
 let n3 = lolh.result.size
 let n4 = lolh.result.thumbnail
-await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `*Titulo:* ${n}\n*Peso:* ${n3}`, thumbnail: await fetch(n4) }, { quoted: m })
+await conn.sendMessage(m.chat, { video: { url: n2 }, fileName: `${n}.mp4`, mimetype: 'video/mp4', caption: `*『✦』Nombre:* ${n}\n\n*『✦』Tamaño:* ${n3}\n\n*『✦』Bot:* ${wm}`, thumbnail: await fetch(n4) }, { quoted: m })
 } catch {
 m.react(error)
-await conn.reply(m.chat, '🚩 *Ocurrió un fallo*', m, fake, ) }}}    
+await conn.reply(m.chat, '*『✦』Error al enviar el contenido.*', m, fake, ) }}}    
 }} catch {
 m.react(error)
-return conn.reply(m.chat, '🚩 *Inténtelo de nuevo*', m, fake, )}
+return conn.reply(m.chat, '*『✦』Error al enviar el contenido.*', m, fake, )}
 
 }
 handler.help = ['play', 'play2']
@@ -147,10 +139,10 @@ var d = Math.floor(seconds / (3600 * 24))
 var h = Math.floor((seconds % (3600 * 24)) / 3600)
 var m = Math.floor((seconds % 3600) / 60)
 var s = Math.floor(seconds % 60)
-var dDisplay = d > 0 ? d + (d == 1 ? ' día, ' : ' días, ') : ''
-var hDisplay = h > 0 ? h + (h == 1 ? " hora, " : " horas, ") : ''
-var mDisplay = m > 0 ? m + (m == 1 ? " minuto, " : " minutos, ") : ''
-var sDisplay = s > 0 ? s + (s == 1 ? ' segundo' : ' segundos') : ''
+var dDisplay = d > 0 ? d + (d == 1 ? ':' : ':') : ''
+var hDisplay = h > 0 ? h + (h == 1 ? ":" : ":") : ''
+var mDisplay = m > 0 ? m + (m == 1 ? ":" : ":") : ''
+var sDisplay = s > 0 ? s + (s == 1 ? ' ' : ' ') : ''
 return dDisplay + hDisplay + mDisplay + sDisplay}
 
 function bytesToSize(bytes) {
