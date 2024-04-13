@@ -15,7 +15,7 @@ para ver el menu completo.
 
 > 𝙉𝙖𝙪𝙛𝙧𝙖𝙕𝙖𝙥𝙥-𝘽𝙚𝙩𝙖
 `.trim()
-  //m.react(🌟) 
+  m.react(🌆) 
  conn.sendFile(m.chat, pp, 'perfil.jpg', str, fkon, false, { mentions: [who] })
 }
 handler.help = ['informacion']
