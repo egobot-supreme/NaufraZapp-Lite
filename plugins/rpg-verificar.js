@@ -31,8 +31,8 @@ let regbot = `
 ┃𝘾𝙤𝙙𝙞𝙜𝙤 𝙙𝙚 𝙫𝙚𝙧𝙞𝙛𝙞𝙘𝙖𝙘𝙞𝙤𝙣:
 ┃ ${sn}
 └•━•❲『✦ REGISTRO ✦』❳`
-//await m.reply(regbot)
-await conn.sendUrl(m.chat, regbot, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: pp, thumbnailUrl: pp, title: '✅ 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝙊 ✅', }})
+await m.reply(regbot)
+//await conn.sendUrl(m.chat, regbot, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: pp, thumbnailUrl: pp, title: '✅ 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝙊 ✅', }})
 
 }
 handler.help = ['reg'].map(v => v + ' <nombre.edad>')
