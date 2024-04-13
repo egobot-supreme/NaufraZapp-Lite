@@ -7,7 +7,7 @@ import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
 var handler = async (m, { conn, command, args, text, usedPrefix }) => {
 
 if (!text) return conn.reply(m.chat, `*『✦』Ingrese el titulo de la canción que busca, por ejemplo:*\n\n*#${command} Lovely*`,  m, fake, )
-m.react(rwait)
+m.react(✅)
 
 try {
 
