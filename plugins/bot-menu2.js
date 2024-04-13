@@ -133,16 +133,22 @@ ${readMore}
 ┕━━━━━━━━━━━━━━━━━━━━•⋄
  `.trim()
     
-const vi = ['https://qu.ax/ygwT.mp4', 'https://qu.ax/iFCi.mp4', 'https://qu.ax/jie.mp4', 'https://qu.ax/Pbha.mp4', 'https://qu.ax/bdvm.mp4']
+const vi = [
+'https://qu.ax/ygwT.mp4',
+  'https://qu.ax/iFCi.mp4',
+     'https://qu.ax/jie.mp4',
+        'https://qu.ax/Pbha.mp4',
+           'https://qu.ax/bdvm.mp4'
+]
 try {
-await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, contextInfo: global.channel })
+await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, contextInfo: yt })
 //await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender] }, { quoted: fkontak }) 
 } catch (error) {
 try {
 await conn.sendMessage(m.chat, { image: { url: imgAll.getRandom() }, gifPlayback: false, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
 } catch (error) {
 try {
-await conn.sendMessage(m.chat, { video: vi.getRandom(), gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
+await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
 } catch (error) {
 try{
 await conn.sendFile(m.chat, imagen4, 'menu.jpg', menu, fkontak, false, { mentions: [m.sender, global.conn.user.jid] })
@@ -151,9 +157,10 @@ return
 }}}} 
 } catch (e) {
     conn.reply(m.chat, 'Ocurrio un error inesperado.', m);
-console.log(e)}}
+    }
+}
 
-handler.command = /^(menuaudios|menuads\?)$/i
+handler.command = /^(menuaudios|menuads|memuaudios|\?)$/i
 export default handler
 
 function clockString(ms) {
@@ -161,4 +168,4 @@ let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
 return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
-  
+                                                                                                                                                              
