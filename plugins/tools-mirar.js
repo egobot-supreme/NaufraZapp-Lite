@@ -1,6 +1,6 @@
 var handler = async (m, { conn }) => {
 
-if (!/viewOnce/.test(m.quoted?.mtype)) return conn.reply(m.chat, '🚩 *Responda a un archivo multimedia con ver una vez*', m, fake, )
+if (!/viewOnce/.test(m.quoted?.mtype)) return conn.reply(m.chat, '『✦』Responda al contenido enviado en una sola vez.', m, fake, )
 let mtype = Object.keys(m.quoted.message)[0]
 let buffer = await m.quoted.download()
 let caption = m.quoted.message[mtype].caption || ''
