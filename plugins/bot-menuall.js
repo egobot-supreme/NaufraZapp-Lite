@@ -294,26 +294,32 @@ ${readMore}
 > NaufraZapp-Beta
  `.trim()
     
-const vi = ['https://qu.ax/ygwT.mp4', 'https://qu.ax/iFCi.mp4', 'https://qu.ax/jie.mp4', 'https://qu.ax/Pbha.mp4', 'https://qu.ax/bdvm.mp4']
+const vi = [
+'https://qu.ax/ygwT.mp4',
+  'https://qu.ax/iFCi.mp4',
+     'https://qu.ax/jie.mp4',
+        'https://qu.ax/Pbha.mp4',
+           'https://qu.ax/bdvm.mp4'
+]
 try {
-await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, contextInfo: channel })
+await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, contextInfo: yt })
 //await conn.sendMessage(m.chat, { video: { url: vi.getRandom() }, gifPlayback: true, caption: menu, mentions: [m.sender] }, { quoted: fkontak }) 
 } catch (error) {
 try {
 await conn.sendMessage(m.chat, { image: { url: imgAll.getRandom() }, gifPlayback: false, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
 } catch (error) {
 try {
-await conn.sendMessage(m.chat, { image: nzImg.getRandom(), gifPlayback: false, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
+await conn.sendMessage(m.chat, { image: { url: nzImg.getRandom() }, gifPlayback: false, caption: menu, mentions: [m.sender, global.conn.user.jid] }, { quoted: fkontak }) 
 } catch (error) {
 try{
-await conn.sendFile(m.chat, imagen5, 'menu.jpg', menu, fkontak, false, { mentions: [m.sender, global.conn.user.jid] })
+await conn.sendFile(m.chat, imagen4, 'menu.jpg', menu, fkontak, false, { mentions: [m.sender, global.conn.user.jid] })
 } catch (error) {
 return 
 }}}} 
 } catch (e) {
     conn.reply(m.chat, 'Ocurrio un error inesperado.', m);
     }
-};
+}
 
 handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i
 export default handler
