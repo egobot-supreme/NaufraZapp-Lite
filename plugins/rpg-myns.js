@@ -1,4 +1,4 @@
-/*import { createHash } from 'crypto'
+import { createHash } from 'crypto'
 
 var handler = async function (m, { conn, text, usedPrefix }) {
 
@@ -13,4 +13,5 @@ handler.command = /^(myns|ceksn|ns)$/i
 
 handler.register = true
 
-export default handler*/
+export default handler
+  
