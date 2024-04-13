@@ -27,10 +27,9 @@ let regbot = `
 ┠───────────────•
 ┃𝙀𝙙𝙖𝙙:
 ┃ ${age} años
-┠───────────────•
-┃𝘾𝙤𝙙𝙞𝙜𝙤 𝙙𝙚 𝙫𝙚𝙧𝙞𝙛𝙞𝙘𝙖𝙘𝙞𝙤𝙣:
-┃ ${sn}
-└•━•❲『✦ REGISTRO ✦』❳`
+└•━•❲『✦ REGISTRO ✦』❳
+> Para ver su codigo de verificación, use el comando:
+*#myns*`
 await m.reply(regbot)
 //await conn.sendUrl(m.chat, regbot, m, { externalAdReply: { mediaType: 1, renderLargerThumbnail: true, thumbnail: pp, thumbnailUrl: pp, title: '✅ 𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝙊 ✅', }})
 
